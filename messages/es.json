@@ -13,6 +13,10 @@
     "hello": "Hola,",
     "typed": ["Soy Nahuel Cittadino", "Desarrollador Frontend Web"]
   },
+  "Home": {
+    "subtitle": "Desarrollador Frontend Web construyendo experiencias limpias, accesibles y performantes con React, Next.js y TypeScript.",
+    "cta": "Mirá mis proyectos"
+  },
   "Works": {
     "title": "Proyectos",
     "subtitle": "Estos son mis proyectos completados y los que estoy trabajando",

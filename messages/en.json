@@ -13,6 +13,10 @@
     "hello": "Hello,",
     "typed": ["I'm Nahuel Cittadino", "Frontend Web Developer"]
   },
+  "Home": {
+    "subtitle": "Frontend Web Developer building clean, accessible and performant experiences with React, Next.js and TypeScript.",
+    "cta": "See my work"
+  },
   "Works": {
     "title": "Works",
     "subtitle": "These are my completed projects and the ones I'm working on",

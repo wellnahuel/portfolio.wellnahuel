@@ -1,8 +1,5 @@
-import { setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Hero } from "@/components/hero";
-import { ProjectGrid } from "@/components/project-grid";
-import { SectionTitle } from "@/components/section-title";
 import { Link } from "@/i18n/navigation";
 
 export default async function HomePage({
@@ -12,22 +9,26 @@ export default async function HomePage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("Works");
+  const t = await getTranslations("Home");
 
   return (
     <>
       <Hero />
       <section className="mx-auto max-w-6xl px-6 py-20">
-        <div className="mb-10 flex items-end justify-between">
-          <SectionTitle number="02" title={t("title")} />
+        <div className="flex flex-col items-center gap-6 text-center">
+          <p className="max-w-2xl leading-relaxed text-muted-foreground">
+            {t("subtitle")}
+          </p>
           <Link
             href="/works"
-            className="font-mono text-sm text-muted-foreground transition-colors hover:text-accent"
+            className="group inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3 font-mono text-sm text-accent-foreground transition-transform hover:scale-105"
           >
-            {t("discover")} →
+            {t("cta")}
+            <span className="transition-transform group-hover:translate-x-1">
+              →
+            </span>
           </Link>
         </div>
-        <ProjectGrid />
       </section>
     </>
   );

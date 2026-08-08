@@ -13,13 +13,15 @@ export function Hero() {
   const [deleting, setDeleting] = useState(false);
 
   // Mouse parallax for the background
+  const sectionRef = useRef<HTMLElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
   const targetX = useRef(0);
   const targetY = useRef(0);
 
   useEffect(() => {
+    const section = sectionRef.current;
     const bg = bgRef.current;
-    if (!bg) return;
+    if (!section || !bg) return;
 
     // Only enable on devices with a fine pointer (mouse/trackpad)
     if (!window.matchMedia("(pointer: fine)").matches) return;
@@ -43,11 +45,13 @@ export function Hero() {
       rafId = requestAnimationFrame(animate);
     };
 
-    bg.addEventListener("mousemove", onMouseMove);
+    // Listen on the SECTION so any mousemove over the hero is captured,
+    // then translate the background layer.
+    section.addEventListener("mousemove", onMouseMove);
     rafId = requestAnimationFrame(animate);
 
     return () => {
-      bg.removeEventListener("mousemove", onMouseMove);
+      section.removeEventListener("mousemove", onMouseMove);
       cancelAnimationFrame(rafId);
       bg.style.transform = "";
     };
@@ -84,7 +88,10 @@ export function Hero() {
   }, [text, deleting, phraseIndex, phrases]);
 
   return (
-    <section className="relative flex min-h-[calc(100dvh-4rem)] items-center overflow-hidden border-b border-border">
+    <section
+      ref={sectionRef}
+      className="relative flex min-h-[calc(100dvh-4rem)] items-center overflow-hidden border-b border-border"
+    >
       {/* Background image with mouse parallax */}
       <div ref={bgRef} className="absolute -inset-8 will-change-transform">
         <Image
@@ -99,10 +106,9 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
-        <h1 className="text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-          {t("hello")}
-          <br />
-          <span className="whitespace-pre text-accent">
+        <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+          <span className="block">{t("hello")}</span>
+          <span className="mt-1 block break-words text-accent">
             {text}
             <span className="animate-blink">▊</span>
           </span>
