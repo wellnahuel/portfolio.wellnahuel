@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 export function Hero() {
@@ -11,6 +11,47 @@ export function Hero() {
   const [text, setText] = useState("");
   const [phraseIndex, setPhraseIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
+
+  // Mouse parallax for the background
+  const bgRef = useRef<HTMLDivElement>(null);
+  const targetX = useRef(0);
+  const targetY = useRef(0);
+
+  useEffect(() => {
+    const bg = bgRef.current;
+    if (!bg) return;
+
+    // Only enable on devices with a fine pointer (mouse/trackpad)
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
+    let currentX = 0;
+    let currentY = 0;
+    let rafId = 0;
+
+    const onMouseMove = (event: MouseEvent) => {
+      const xFactor = window.innerWidth / 5;
+      const yFactor = window.innerHeight / 5;
+      targetX.current = event.clientX / xFactor;
+      targetY.current = event.clientY / yFactor;
+    };
+
+    const animate = () => {
+      // Smoothly interpolate towards the target for a fluid feel
+      currentX += (targetX.current - currentX) * 0.08;
+      currentY += (targetY.current - currentY) * 0.08;
+      bg.style.transform = `translate3d(-${1.5 * currentX}px, -${1.5 * currentY}px, 0)`;
+      rafId = requestAnimationFrame(animate);
+    };
+
+    bg.addEventListener("mousemove", onMouseMove);
+    rafId = requestAnimationFrame(animate);
+
+    return () => {
+      bg.removeEventListener("mousemove", onMouseMove);
+      cancelAnimationFrame(rafId);
+      bg.style.transform = "";
+    };
+  }, []);
 
   useEffect(() => {
     const current = phrases[phraseIndex % phrases.length];
@@ -44,8 +85,8 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-[calc(100dvh-4rem)] items-center overflow-hidden border-b border-border">
-      {/* Background image */}
-      <div className="absolute inset-0">
+      {/* Background image with mouse parallax */}
+      <div ref={bgRef} className="absolute -inset-8 will-change-transform">
         <Image
           src="/assets/images/front-landing2.jpg"
           alt=""
