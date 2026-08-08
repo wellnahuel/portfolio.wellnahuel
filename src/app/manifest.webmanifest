@@ -1,0 +1,16 @@
+{
+  "name": "Nahuel Cittadino — Frontend Web Developer",
+  "short_name": "wellnahuel",
+  "description": "Frontend Web Developer portfolio — Nahuel Cittadino. Projects, experience and contact.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#001aff",
+  "icons": [
+    {
+      "src": "/assets/apple-icon-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

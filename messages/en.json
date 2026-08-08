@@ -1,0 +1,54 @@
+{
+  "Metadata": {
+    "title": "Nahuel Cittadino",
+    "description": "Frontend Web Developer portfolio — Nahuel Cittadino. Projects, experience and contact."
+  },
+  "Nav": {
+    "home": "Home",
+    "works": "Works",
+    "about": "About me",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "hello": "Hello,",
+    "typed": ["I'm Nahuel Cittadino", "Frontend Web Developer"]
+  },
+  "Works": {
+    "title": "Works",
+    "subtitle": "These are my completed projects and the ones I'm working on",
+    "discover": "Discover",
+    "repository": "Github"
+  },
+  "About": {
+    "title": "About me",
+    "name": "I'm Nahuel",
+    "intro": "I'm searching for new challenges & experiences to keep learning and improving.",
+    "goalsTitle": "My goals",
+    "goalsText": "I am interested in working and learning in technology to collaborate in projects that leave a social footprint where I can really solve the needs of people, contributing everything I have learned throughout my life in code and tech development, and fulfilling my dream of devising and creating digital products in the real world for real people.",
+    "stackTitle": "This is my tech stack",
+    "resumeTitle": "See my experience and formation in detail",
+    "resume": "Resume",
+    "profileAlt": "Profile photo"
+  },
+  "Contact": {
+    "title": "Contact me",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Enter your message",
+    "send": "Send",
+    "emailLabel": "Email",
+    "location": "Mar del Plata, Buenos Aires, Argentina",
+    "socialTitle": "Follow me on social networks",
+    "resume": "Resume"
+  },
+  "Footer": {
+    "thanks": "Thanks for watching! :D",
+    "lastUpdate": "Last update: 04-2026"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Back home"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "Metadata": {
+    "title": "Nahuel Cittadino",
+    "description": "Portfolio de Desarrollador Frontend — Nahuel Cittadino. Proyectos, experiencia y contacto."
+  },
+  "Nav": {
+    "home": "Inicio",
+    "works": "Proyectos",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "Hero": {
+    "hello": "Hola,",
+    "typed": ["Soy Nahuel Cittadino", "Desarrollador Frontend Web"]
+  },
+  "Works": {
+    "title": "Proyectos",
+    "subtitle": "Estos son mis proyectos completados y los que estoy trabajando",
+    "discover": "Descubrir",
+    "repository": "Github"
+  },
+  "About": {
+    "title": "Sobre mí",
+    "name": "Soy Nahuel",
+    "intro": "Estoy buscando nuevos desafíos y experiencias para seguir aprendiendo y mejorando.",
+    "goalsTitle": "Mis objetivos",
+    "goalsText": "Me interesa trabajar y aprender en tecnología para colaborar en proyectos que dejen una huella social donde pueda resolver de verdad las necesidades de las personas, aportando todo lo que aprendí a lo largo de mi vida en código y desarrollo, y cumpliendo mi sueño de idear y crear productos digitales en el mundo real para personas reales.",
+    "stackTitle": "Este es mi stack tecnológico",
+    "resumeTitle": "Mirá mi experiencia y formación en detalle",
+    "resume": "Currículum",
+    "profileAlt": "Foto de perfil"
+  },
+  "Contact": {
+    "title": "Contactame",
+    "name": "Nombre",
+    "email": "Email",
+    "subject": "Asunto",
+    "message": "Escribí tu mensaje",
+    "send": "Enviar",
+    "emailLabel": "Email",
+    "location": "Mar del Plata, Buenos Aires, Argentina",
+    "socialTitle": "Seguime en las redes",
+    "resume": "Currículum"
+  },
+  "Footer": {
+    "thanks": "¡Gracias por mirar! :D",
+    "lastUpdate": "Última actualización: 04-2026"
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "description": "La página que buscás no existe o fue movida.",
+    "backHome": "Volver al inicio"
+  }
+}
