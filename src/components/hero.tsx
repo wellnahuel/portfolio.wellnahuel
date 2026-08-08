@@ -23,25 +23,21 @@ export function Hero() {
     const bg = bgRef.current;
     if (!section || !bg) return;
 
-    // Only enable on devices with a fine pointer (mouse/trackpad)
-    if (!window.matchMedia("(pointer: fine)").matches) return;
-
     let currentX = 0;
     let currentY = 0;
     let rafId = 0;
 
     const onMouseMove = (event: MouseEvent) => {
-      const xFactor = window.innerWidth / 5;
-      const yFactor = window.innerHeight / 5;
-      targetX.current = event.clientX / xFactor;
-      targetY.current = event.clientY / yFactor;
+      // Normalized position in [-1, 1]: 0 at viewport center, ±1 at edges
+      targetX.current = (event.clientX / window.innerWidth - 0.5) * 2;
+      targetY.current = (event.clientY / window.innerHeight - 0.5) * 2;
     };
 
     const animate = () => {
       // Smoothly interpolate towards the target for a fluid feel
       currentX += (targetX.current - currentX) * 0.08;
       currentY += (targetY.current - currentY) * 0.08;
-      bg.style.transform = `translate3d(-${1.5 * currentX}px, -${1.5 * currentY}px, 0)`;
+      bg.style.transform = `translate3d(${-20 * currentX}px, ${-20 * currentY}px, 0)`;
       rafId = requestAnimationFrame(animate);
     };
 
@@ -100,7 +96,7 @@ export function Hero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-20 dark:opacity-10"
+          className="object-cover opacity-30 dark:opacity-20"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent" />
       </div>
