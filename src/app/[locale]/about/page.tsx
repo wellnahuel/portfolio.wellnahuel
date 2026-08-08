@@ -119,7 +119,7 @@ export default async function AboutPage({
 
         <div className="relative aspect-square overflow-hidden rounded-lg border border-border lg:aspect-auto">
           <Image
-            src="/assets/images/profile-portfolio.webp"
+            src="/assets/images/profile-portfolio.jpg"
             alt={t("profileAlt")}
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

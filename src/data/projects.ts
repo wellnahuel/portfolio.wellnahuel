@@ -64,18 +64,18 @@ export const projects: Project[] = [
       "postman",
     ],
     images: {
-      banner: "/assets/images/foodsterr-banner-color.webp",
+      banner: "/assets/images/foodsterr-banner-color.png",
       screenshots: [
         {
-          src: "/assets/images/foodsterr-foto1.webp",
+          src: "/assets/images/foodsterr-foto1.png",
           caption: { en: "Home", es: "Inicio", it: "Home" },
         },
         {
-          src: "/assets/images/foodsterr-foto2-1.webp",
+          src: "/assets/images/foodsterr-foto2-1.png",
           caption: { en: "Recipe details", es: "Detalle de receta", it: "Dettaglio ricetta" },
         },
         {
-          src: "/assets/images/foodsterr-foto3.webp",
+          src: "/assets/images/foodsterr-foto3.png",
           caption: { en: "Create recipe", es: "Crear receta", it: "Crea ricetta" },
         },
       ],
@@ -131,14 +131,14 @@ export const projects: Project[] = [
       "postman",
     ],
     images: {
-      banner: "/assets/images/banner-athenas.webp",
+      banner: "/assets/images/banner-athenas.png",
       screenshots: [
         {
-          src: "/assets/images/athenas1.webp",
+          src: "/assets/images/athenas1.png",
           caption: { en: "Edit profile", es: "Editar perfil", it: "Modifica profilo" },
         },
         {
-          src: "/assets/images/athena2.webp",
+          src: "/assets/images/athena2.png",
           caption: {
             en: "Payment gateway with MercadoPago API",
             es: "Pasarela de pagos con API de MercadoPago",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
           },
         },
         {
-          src: "/assets/images/athenas3.webp",
+          src: "/assets/images/athenas3.png",
           caption: { en: "Ecommerce", es: "Ecommerce", it: "Ecommerce" },
         },
       ],
@@ -186,10 +186,10 @@ export const projects: Project[] = [
     ],
     techStack: ["javascript", "react", "css3"],
     images: {
-      banner: "/assets/images/banner-weather-app.webp",
+      banner: "/assets/images/banner-weather-app.png",
       screenshots: [
-        { src: "/assets/images/wellweather.webp" },
-        { src: "/assets/images/weather-app2.webp" },
+        { src: "/assets/images/wellweather.png" },
+        { src: "/assets/images/weather-app2.png" },
       ],
     },
     links: [
@@ -231,18 +231,18 @@ export const projects: Project[] = [
     ],
     techStack: ["javascript", "react", "tailwind"],
     images: {
-      banner: "/assets/images/agoosto-banner-color.webp",
+      banner: "/assets/images/agoosto-banner-color.png",
       screenshots: [
         {
-          src: "/assets/images/agoosto-foto-1.webp",
+          src: "/assets/images/agoosto-foto-1.png",
           caption: { en: "About section", es: "Sección about", it: "Sezione about" },
         },
         {
-          src: "/assets/images/agoosto-foto-2.webp",
+          src: "/assets/images/agoosto-foto-2.png",
           caption: { en: "Projects section", es: "Sección de proyectos", it: "Sezione progetti" },
         },
         {
-          src: "/assets/images/agoosto-foto-3.webp",
+          src: "/assets/images/agoosto-foto-3.png",
           caption: { en: "Contact section", es: "Sección de contacto", it: "Sezione contatti" },
         },
       ],
@@ -281,8 +281,8 @@ export const projects: Project[] = [
     ],
     techStack: ["typescript", "mui"],
     images: {
-      banner: "/assets/images/calculatorts-banner-color.webp",
-      screenshots: [{ src: "/assets/images/calculatorts-foto-1.webp" }],
+      banner: "/assets/images/calculatorts-banner-color.png",
+      screenshots: [{ src: "/assets/images/calculatorts-foto-1.png" }],
     },
     links: [
       {
