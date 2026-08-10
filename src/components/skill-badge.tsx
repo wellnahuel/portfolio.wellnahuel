@@ -20,9 +20,20 @@ const SKILL_ICONS: Record<string, string> = {
   postman: "/assets/icons/postman-svgrepo-com.svg",
 };
 
+// PNG icons already carry their brand colors; SVG icons are monochrome
+// black, so they need inverting in dark mode to stay visible.
+const COLORED_PNGS = new Set([
+  "sequelize",
+  "auth0",
+  "mercadopago",
+  "bootstrap",
+]);
+
 export function SkillBadge({ skill }: { skill: string }) {
   const src = SKILL_ICONS[skill];
   if (!src) return null;
+
+  const needsInvert = src.endsWith(".svg") && !COLORED_PNGS.has(skill);
 
   return (
     <span
@@ -34,7 +45,7 @@ export function SkillBadge({ skill }: { skill: string }) {
         alt={skill}
         width={22}
         height={22}
-        className="h-[22px] w-[22px] object-contain"
+        className={`h-[22px] w-[22px] object-contain ${needsInvert ? "dark:invert" : ""}`}
       />
     </span>
   );
