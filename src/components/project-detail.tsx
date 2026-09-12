@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useLocale } from "next-intl";
-import type { Project } from "@/data/projects";
+import { getTotalProjectCount, type Project } from "@/data/projects";
 import { SkillBadge } from "./skill-badge";
 
 export function ProjectDetail({ project }: { project: Project }) {
@@ -13,7 +13,7 @@ export function ProjectDetail({ project }: { project: Project }) {
       {/* Banner */}
       <div className="relative aspect-[21/9] overflow-hidden rounded-lg border border-border">
         <Image
-          src={project.images.banner}
+          src={project.images.hero ?? project.images.banner}
           alt={title}
           fill
           priority
@@ -24,7 +24,7 @@ export function ProjectDetail({ project }: { project: Project }) {
 
       <header className="space-y-3">
         <p className="font-mono text-sm text-accent">
-          {project.number}/005 · {project.year}
+          {project.number}/{getTotalProjectCount()} · {project.year}
         </p>
         <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
           {title}
@@ -66,24 +66,15 @@ export function ProjectDetail({ project }: { project: Project }) {
       {/* Screenshots */}
       {project.images.screenshots.length > 0 && (
         <div className="space-y-6">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="flex flex-col gap-8">
             {project.images.screenshots.map((shot, i) => (
-              <figure
-                key={i}
-                className={`space-y-2 ${
-                  shot.src.includes("foto3") ||
-                  shot.src.includes("athenas3") ||
-                  shot.src.includes("agoosto-foto-3")
-                    ? "md:col-span-2"
-                    : ""
-                }`}
-              >
+              <figure key={i} className="space-y-2">
                 <div className="relative aspect-video overflow-hidden rounded-lg border border-border">
                   <Image
                     src={shot.src}
                     alt={shot.caption?.[locale] ?? title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 100vw, 80vw"
                     className="object-cover"
                   />
                 </div>

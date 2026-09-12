@@ -6,8 +6,7 @@ const SKILL_ICONS: Record<string, string> = {
   redux: "/assets/icons/icons8-redux.svg",
   postgresql: "/assets/icons/icons8-postgresql.svg",
   express: "/assets/icons/icons8-express-js.svg",
-  sequelize: "/assets/icons/sequelize.png",
-  auth0: "/assets/icons/icons8-auth0.png",
+  sequelize: "/assets/icons/sequelize.svg",
   mercadopago: "/assets/icons/MercadoPagoIcon.png",
   bootstrap: "/assets/icons/icons8-bootstrap-48.png",
   css3: "/assets/icons/icons8-css3.svg",
@@ -18,13 +17,14 @@ const SKILL_ICONS: Record<string, string> = {
   typescript: "/assets/icons/icons8-typescript.svg",
   mui: "/assets/icons/icons8-material-ui.svg",
   postman: "/assets/icons/postman-svgrepo-com.svg",
+  zustand: "/assets/icons/zustand.svg",
+  vercel: "/assets/icons/vercel.svg",
+  vite: "/assets/icons/vite.svg",
 };
 
 // PNG icons already carry their brand colors; SVG icons are monochrome
 // black, so they need inverting in dark mode to stay visible.
 const COLORED_PNGS = new Set([
-  "sequelize",
-  "auth0",
   "mercadopago",
   "bootstrap",
 ]);

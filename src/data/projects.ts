@@ -14,12 +14,14 @@ export interface ProjectLink {
 export interface Project {
   id: string;
   number: string;
+  visible?: boolean;
   title: LocalizedText;
   tagline: LocalizedText;
   description: LocalizedText[];
   techStack: string[];
   images: {
     banner: string;
+    hero?: string;
     screenshots: { src: string; caption?: LocalizedText }[];
   };
   links: ProjectLink[];
@@ -27,10 +29,12 @@ export interface Project {
   year: number;
 }
 
-export const projects: Project[] = [
+type ProjectSeed = Omit<Project, "number">;
+
+const projectSeeds: ProjectSeed[] = [
   {
     id: "foodsterr",
-    number: "001",
+    visible: false,
     title: {
       en: "Food App - Foodsterr",
       es: "App de Recetas - Foodsterr",
@@ -94,7 +98,6 @@ export const projects: Project[] = [
   },
   {
     id: "athenas-club",
-    number: "002",
     title: {
       en: "Ecommerce - Athenas Club",
       es: "Ecommerce - Athenas Club",
@@ -107,106 +110,69 @@ export const projects: Project[] = [
     },
     description: [
       {
-        en: "Design and development of a sportswear ecommerce with payment gateway (MercadoPago API), authentication, notifications, user and admin dashboards, persistent cart, product reviews and Q&A, product creation and image upload to Cloudinary.",
-        es: "Diseño y desarrollo de un ecommerce de indumentaria deportiva con pasarela de pagos (API de MercadoPago), autenticación, notificaciones, paneles de usuario y administrador, carrito persistente, reseñas de productos y preguntas y respuestas, creación de productos y subida de imágenes a Cloudinary.",
-        it: "Progettazione e sviluppo di un ecommerce di abbigliamento sportivo con gateway di pagamento (API MercadoPago), autenticazione, notifiche, dashboard utente e admin, carrello persistente, recensioni e domande sui prodotti, creazione di prodotti e upload di immagini su Cloudinary.",
+        en: "Athenas Club is a sportswear e-commerce platform built as a monorepo (api/ + web/). The frontend is built with React 19, TypeScript, and Vite, featuring a custom design system on top of Tailwind CSS v4 (reusable components such as Button, Card, Modal, etc.). Global state is managed with Zustand, including a cart persisted to localStorage that survives page refreshes.",
+        es: "Athenas Club es una plataforma de e-commerce de indumentaria deportiva con arquitectura de monorepo (api/ + web/). El frontend está construido con React 19, TypeScript y Vite, con design system propio sobre Tailwind CSS v4 (componentes reutilizables de Button, Card, Modal, etc.). El estado global se maneja con Zustand, incluyendo un carrito persistente en localStorage que sobrevive al refresco de la sesión.",
+        it: "Piattaforma e-commerce realizzata come monorepo: frontend SPA con React 19, TypeScript, Vite e Tailwind CSS v4; backend Node.js/Express con PostgreSQL e Sequelize. Carrello persistente con Zustand, checkout integrato con le API di MercadoPago (con modalità demo di riserva), login multi-socio e profilo utente. Deploy del frontend su Vercel.",
       },
       {
-        en: "Developed with React, Redux and Bootstrap on the frontend; Node.js with Express and Auth0 on the backend; PostgreSQL and Sequelize as database.",
-        es: "Desarrollado con React, Redux y Bootstrap en el frontend; Node.js con Express y Auth0 en el backend; PostgreSQL y Sequelize como base de datos.",
-        it: "Sviluppato con React, Redux e Bootstrap nel frontend; Node.js con Express e Auth0 nel backend; PostgreSQL e Sequelize come database.",
+        en: "The backend, built with Node.js/Express, exposes a REST API backed by PostgreSQL and Sequelize as the ORM (models for users, products, categories, cart, reviews, purchases, and roles). Checkout is integrated with MercadoPago payment preferences, with a demo fallback mode for development without credentials. Authentication is a multi-member demo login that lets you test different user profiles.",
+        es: "El backend, en Node.js/Express, expone una API REST con PostgreSQL y Sequelize como ORM (modelos de usuarios, productos, categorías, carrito, reseñas, compras y roles). El checkout se integra con las preferencias de pago de MercadoPago, con un modo demo de respaldo para desarrollo sin credenciales. La autenticación es un login demo multi-socio que permite probar distintos perfiles de usuario.",
+        it: "Il backend, in Node.js/Express, espone un'API REST con PostgreSQL e Sequelize come ORM (modelli di utenti, prodotti, categorie, carrello, recensioni, acquisti e ruoli). Il checkout si integra con le preferenze di pagamento di MercadoPago, con una modalità demo di riserva per lo sviluppo senza credenziali. L'autenticazione è un login demo multi-socio che permette di provare diversi profili utente.",
+      },
+      {
+        en: "It includes data seeding, unified development scripts (dev.sh), a Bun-based toolchain, and frontend deployment as a static SPA on Vercel. The project also represents a successful migration from a legacy stack (Redux/Bootstrap/CRA) to a modern one, which involved redesigning global state management, the styling system, and the build pipeline.",
+        es: "Incluye seed de datos, scripts de desarrollo unificados (dev.sh), toolchain con Bun y deploy del frontend como SPA estática en Vercel. El proyecto representa además una migración exitosa de un stack legacy (Redux/Bootstrap/CRA) a uno moderno, lo que implicó rediseñar el estado global, el sistema de estilos y el flujo de build.",
+        it: "Include seed dei dati, script di sviluppo unificati (dev.sh), toolchain con Bun e deploy del frontend come SPA statica su Vercel. Il progetto rappresenta inoltre una migrazione di successo da uno stack legacy (Redux/Bootstrap/CRA) a uno moderno, che ha implicato ridisegnare la gestione dello stato globale, il sistema di stili e il flusso di build.",
       },
     ],
     techStack: [
-      "javascript",
+      "typescript",
       "react",
-      "redux",
-      "postgresql",
+      "vite",
+      "tailwind",
+      "zustand",
       "express",
+      "postgresql",
       "sequelize",
-      "auth0",
       "mercadopago",
-      "bootstrap",
-      "css3",
-      "postman",
+      "vercel",
     ],
     images: {
-      banner: "/assets/images/banner-athenas.png",
+      banner: "/assets/images/athenas-01.png",
+      hero: "/assets/images/athenas-02.png",
       screenshots: [
         {
-          src: "/assets/images/athenas1.png",
-          caption: { en: "Edit profile", es: "Editar perfil", it: "Modifica profilo" },
+          src: "/assets/images/athenas-03.png",
+          caption: { en: "Shopping cart", es: "Carrito de compras", it: "Carrello acquisti" },
         },
         {
-          src: "/assets/images/athena2.png",
-          caption: {
-            en: "Payment gateway with MercadoPago API",
-            es: "Pasarela de pagos con API de MercadoPago",
-            it: "Gateway di pagamento con API MercadoPago",
-          },
+          src: "/assets/images/athenas-04.png",
+          caption: { en: "Mercado Pago API for checkout", es: "API de Mercado Pago para checkout", it: "API di Mercado Pago per il checkout" },
         },
         {
-          src: "/assets/images/athenas3.png",
-          caption: { en: "Ecommerce", es: "Ecommerce", it: "Ecommerce" },
+          src: "/assets/images/athenas-05.png",
+          caption: { en: "Activity enrollment", es: "Inscripción a actividades", it: "Iscrizione alle attività" },
         },
-      ],
-    },
-    links: [
-      {
-        label: { en: "Repository", es: "Repositorio", it: "Repository" },
-        href: "https://github.com/MATarg81/proyecto-final",
-      },
-    ],
-    year: 2022,
-  },
-  {
-    id: "weather-app",
-    number: "003",
-    title: {
-      en: "Weather App",
-      es: "App del Clima",
-      it: "App Meteo",
-    },
-    tagline: {
-      en: "Simple weather application",
-      es: "Aplicación simple del clima",
-      it: "Semplice applicazione meteo",
-    },
-    description: [
-      {
-        en: "Design and development of a simple responsive weather app built with the OpenWeatherMap API.",
-        es: "Diseño y desarrollo de una app del clima simple y responsive construida con la API de OpenWeatherMap.",
-        it: "Progettazione e sviluppo di una semplice app meteo responsive realizzata con l'API OpenWeatherMap.",
-      },
-      {
-        en: "Developed with React and CSS.",
-        es: "Desarrollada con React y CSS.",
-        it: "Sviluppata con React e CSS.",
-      },
-    ],
-    techStack: ["javascript", "react", "css3"],
-    images: {
-      banner: "/assets/images/banner-weather-app.png",
-      screenshots: [
-        { src: "/assets/images/wellweather.png" },
-        { src: "/assets/images/weather-app2.png" },
+        {
+          src: "/assets/images/athenas-06.png",
+          caption: { en: "Dev team", es: "Equipo dev", it: "Team di sviluppo" },
+        },
       ],
     },
     links: [
       {
         label: { en: "Deploy", es: "Deploy", it: "Deploy" },
-        href: "https://wellweatherapp.netlify.app/",
+        href: "https://athenas-reload-gamma.vercel.app/",
       },
       {
         label: { en: "Repository", es: "Repositorio", it: "Repository" },
-        href: "https://github.com/wellnahuel/weatherApp-Responsive",
+        href: "https://github.com/wellnahuel/athenas-reload",
       },
     ],
     year: 2022,
   },
   {
     id: "agoosto",
-    number: "004",
     title: {
       en: "Agustín Orihuela's Portfolio",
       es: "Portfolio de Agustín Orihuela",
@@ -259,45 +225,19 @@ export const projects: Project[] = [
     ],
     year: 2023,
   },
-  {
-    id: "calculator",
-    number: "005",
-    title: {
-      en: "Calculator",
-      es: "Calculadora",
-      it: "Calcolatrice",
-    },
-    tagline: {
-      en: "Classic calculator with TypeScript and MaterialUI",
-      es: "Calculadora clásica con TypeScript y MaterialUI",
-      it: "Calcolatrice classica con TypeScript e MaterialUI",
-    },
-    description: [
-      {
-        en: "Classic calculator. A simple app to put TypeScript and MaterialUI concepts into practice. The site is responsive.",
-        es: "Calculadora clásica. Una app simple para poner en práctica conceptos de TypeScript y MaterialUI. El sitio es responsive.",
-        it: "Calcolatrice classica. Un'app semplice per mettere in pratica i concetti di TypeScript e MaterialUI. Il sito è responsive.",
-      },
-    ],
-    techStack: ["typescript", "mui"],
-    images: {
-      banner: "/assets/images/calculatorts-banner-color.png",
-      screenshots: [{ src: "/assets/images/calculatorts-foto-1.png" }],
-    },
-    links: [
-      {
-        label: { en: "Deploy", es: "Deploy", it: "Deploy" },
-        href: "https://calculatortsmui.netlify.app/",
-      },
-      {
-        label: { en: "Repository", es: "Repositorio", it: "Repository" },
-        href: "https://github.com/wellnahuel/TS_MaterialUI_Calculator",
-      },
-    ],
-    year: 2023,
-  },
 ];
+
+export const projects: Project[] = projectSeeds
+  .filter((project) => project.visible !== false)
+  .map((project, index) => ({
+    ...project,
+    number: String(index + 1).padStart(3, "0"),
+  }));
 
 export function getProjectById(id: string): Project | undefined {
   return projects.find((p) => p.id === id);
+}
+
+export function getTotalProjectCount(): string {
+  return String(projects.length).padStart(3, "0");
 }
