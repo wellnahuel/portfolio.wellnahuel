@@ -172,58 +172,83 @@ const projectSeeds: ProjectSeed[] = [
     year: 2022,
   },
   {
-    id: "agoosto",
+    id: "torino-city-intelligence",
     title: {
-      en: "Agustín Orihuela's Portfolio",
-      es: "Portfolio de Agustín Orihuela",
-      it: "Portfolio di Agustín Orihuela",
+      en: "Torino City Intelligence",
+      es: "Torino City Intelligence",
+      it: "Torino City Intelligence",
     },
     tagline: {
-      en: "Portfolio for a graphic designer",
-      es: "Portfolio para un diseñador gráfico",
-      it: "Portfolio per un graphic designer",
+      en: "Interactive map of Turin to decide where to open a café",
+      es: "Mapa interactivo de Turín para decidir dónde abrir un café",
+      it: "Mappa interattiva di Torino per decidere dove aprire un caffè",
     },
     description: [
       {
-        en: "Development of a portfolio for a talented graphic designer, using React and libraries like framer-motion. The site is responsive.",
-        es: "Desarrollo de un portfolio para un talentoso diseñador gráfico, usando React y librerías como framer-motion. El sitio es responsive.",
-        it: "Sviluppo di un portfolio per un talentuoso graphic designer, usando React e librerie come framer-motion. Il sito è responsive.",
+        en: "Interactive map of Turin that scores the city's 94 statistical zones from 0 to 100 on the best place to open a café, with an explainable breakdown per variable.",
+        es: "Mapa interactivo de Turín que puntúa las 94 zonas estadísticas de la ciudad de 0 a 100 sobre el mejor lugar para abrir un café, con un desglose explicable por variable.",
+        it: "Mappa interattiva di Torino che assegna un punteggio da 0 a 100 alle 94 zone statistiche della città sul miglior posto per aprire un caffè, con una ripartizione spiegabile per variabile.",
       },
       {
-        en: "Styles designed with TailwindCSS. The site has a blog format showing Agustín's projects, services and contact channels.",
-        es: "Estilos diseñados con TailwindCSS. El sitio tiene formato blog, donde se muestran los proyectos, servicios y canales de contacto de Agustín.",
-        it: "Stili progettati con TailwindCSS. Il sito ha un formato blog, dove vengono mostrati i progetti, i servizi e i canali di contatto di Agustín.",
+        en: "Six toggleable POI layers (cafés, restaurants, transit, schools, services and green areas) over a choropleth basemap, with a fully static export and zero API keys.",
+        es: "Seis capas de POI activables (cafés, restaurantes, transporte, escuelas, servicios y áreas verdes) sobre un mapa coroplético, con export estático y cero API keys.",
+        it: "Sei layer di POI attivabili (caffè, ristoranti, trasporti, scuole, servizi e aree verdi) su una mappa coropletica, con export statico e zero API key.",
       },
     ],
-    techStack: ["javascript", "react", "tailwind"],
+    techStack: ["nextjs", "typescript", "react", "tailwind", "maplibre", "heroui"],
     images: {
-      banner: "/assets/images/agoosto-banner-color.png",
+      banner: "/assets/images/torino-03.png",
       screenshots: [
-        {
-          src: "/assets/images/agoosto-foto-1.png",
-          caption: { en: "About section", es: "Sección about", it: "Sezione about" },
-        },
-        {
-          src: "/assets/images/agoosto-foto-2.png",
-          caption: { en: "Projects section", es: "Sección de proyectos", it: "Sezione progetti" },
-        },
-        {
-          src: "/assets/images/agoosto-foto-3.png",
-          caption: { en: "Contact section", es: "Sección de contacto", it: "Sezione contatti" },
-        },
+        { src: "/assets/images/torino-01.png", caption: { en: "Interactive map view", es: "Vista del mapa interactivo", it: "Vista della mappa interattiva" } },
+        { src: "/assets/images/torino-02.png", caption: { en: "Interactive map view", es: "Vista del mapa interactivo", it: "Vista della mappa interattiva" } },
       ],
     },
     links: [
+      { label: { en: "Deploy", es: "Deploy", it: "Deploy" }, href: "https://torino-city-intelligence.vercel.app/" },
+      { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/wellnahuel/torino-city-intelligence" },
+    ],
+    year: 2026,
+  },
+  {
+    id: "entienda-y-aprenda",
+    title: {
+      en: "Entienda y Aprenda",
+      es: "Entienda y Aprenda",
+      it: "Entienda y Aprenda",
+    },
+    tagline: {
+      en: "Tutoring marketplace connecting students with private tutors",
+      es: "Marketplace de clases particulares que conecta estudiantes con tutores",
+      it: "Marketplace di lezioni private che collega studenti con tutor",
+    },
+    description: [
       {
-        label: { en: "Deploy", es: "Deploy", it: "Deploy" },
-        href: "https://agoosto.netlify.app/",
+        en: "Full-stack SaaS platform that connects students with private tutors: tutor search by subject and university, pricing with group discounts and packs, class booking with a visual schedule picker and slot holds, real-time chat, and complete dashboards for both tutors and students.",
+        es: "Plataforma SaaS full-stack que conecta estudiantes con tutores particulares: búsqueda de tutores por materia y universidad, precios con descuentos por grupo y packs, reserva de clases con selector visual de horarios y bloqueo de slots, chat en tiempo real y dashboards completos para tutores y estudiantes.",
+        it: "Piattaforma SaaS full-stack che collega studenti con tutor privati: ricerca tutor per materia e università, prezzi con sconti di gruppo e pacchetti, prenotazione di lezioni con selettore visivo di orari e blocco degli slot, chat in tempo reale e dashboard complete sia per tutor che per studenti.",
       },
       {
-        label: { en: "Repository", es: "Repositorio", it: "Repository" },
-        href: "https://github.com/wellnahuel/Portfolio-Agoosto-2",
+        en: "Built with Next.js 16, React 19 and TypeScript on the frontend, and a REST API in Python with Flask, SQLAlchemy, PostgreSQL and Redis on the backend. Deployed with Docker in production.",
+        es: "Desarrollado con Next.js 16, React 19 y TypeScript en el frontend, y una API REST en Python con Flask, SQLAlchemy, PostgreSQL y Redis en el backend. Desplegado con Docker en producción.",
+        it: "Sviluppato con Next.js 16, React 19 e TypeScript nel frontend, e un'API REST in Python con Flask, SQLAlchemy, PostgreSQL e Redis nel backend. Distribuito con Docker in produzione.",
       },
     ],
-    year: 2023,
+    techStack: ["nextjs", "typescript", "react", "python", "flask", "postgresql", "redis", "docker"],
+    images: {
+      banner: "/assets/images/eya-06.png",
+      screenshots: [
+        { src: "/assets/images/eya-01.png", caption: { en: "Slot picker to view the tutor's availability", es: "Slot picker para ver la disponibilidad del profesor", it: "Selettore di slot per vedere la disponibilità del tutor" } },
+        { src: "/assets/images/eya-02.png", caption: { en: "Tutor profile", es: "Perfil del profesor", it: "Profilo del tutor" } },
+        { src: "/assets/images/eya-03.png", caption: { en: "Private chat section between tutors and students", es: "Sección de chats privados entre profesores y alumnos", it: "Sezione di chat private tra tutor e studenti" } },
+        { src: "/assets/images/eya-04.png", caption: { en: "Dashboard for managing the tutor's payments, subjects taught and availability", es: "Dashboard para la gestión de los pagos del profesor, las materias que dicta y la disponibilidad", it: "Dashboard per la gestione dei pagamenti del tutor, delle materie insegnate e della disponibilità" } },
+        { src: "/assets/images/eya-05.png", caption: { en: "Tutor search section", es: "Sección de búsqueda de profesores", it: "Sezione di ricerca dei tutor" } },
+      ],
+    },
+    links: [
+      { label: { en: "Website", es: "Sitio web", it: "Sito web" }, href: "https://entiendayaprenda.com/" },
+      { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/Entienda-y-Aprenda" },
+    ],
+    year: 2026,
   },
 ];
 

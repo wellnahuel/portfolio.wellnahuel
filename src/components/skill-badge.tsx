@@ -20,6 +20,13 @@ const SKILL_ICONS: Record<string, string> = {
   zustand: "/assets/icons/zustand.svg",
   vercel: "/assets/icons/vercel.svg",
   vite: "/assets/icons/vite.svg",
+  nextjs: "/assets/icons/nextjs.svg",
+  maplibre: "/assets/icons/maplibre.svg",
+  heroui: "/assets/icons/heroui.svg",
+  python: "/assets/icons/python.svg",
+  flask: "/assets/icons/flask.svg",
+  redis: "/assets/icons/redis.svg",
+  docker: "/assets/icons/docker.svg",
 };
 
 // PNG icons already carry their brand colors; SVG icons are monochrome
