@@ -104,13 +104,13 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-6xl px-6 py-24">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
           <span className="block">{t("hello")}</span>
-          <span className="mt-1 block break-words text-accent">
+          <span className="mt-1 break-words animate-gradient-text">
             {text}
             <span className="animate-blink">▊</span>
           </span>
         </h1>
         <p className="mt-6 max-w-md font-mono text-sm text-muted-foreground">
-          React · Next.js · TypeScript · Node.js
+          React · Next.js · TypeScript · Python · Flask · PostgreSQL
         </p>
       </div>
     </section>

@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Nahuel Cittadino",
-    "description": "Frontend Web Developer portfolio — Nahuel Cittadino. Projects, experience and contact."
+    "description": "Full-Stack Developer portfolio — Nahuel Cittadino. Projects, experience and contact."
   },
   "Nav": {
     "home": "Home",
@@ -11,10 +11,10 @@
   },
   "Hero": {
     "hello": "Hello,",
-    "typed": ["I'm Nahuel Cittadino", "Frontend Web Developer"]
+    "typed": ["I'm Nahuel Cittadino", "Full-Stack Developer"]
   },
   "Home": {
-    "subtitle": "Frontend Web Developer building clean, accessible and performant experiences with React, Next.js and TypeScript.",
+    "subtitle": "Full-Stack Developer building complete products — from React and Next.js interfaces to Python, Flask and PostgreSQL backends.",
     "cta": "See my work"
   },
   "Works": {
@@ -47,8 +47,8 @@
     "resume": "Resume"
   },
   "Footer": {
-    "thanks": "Thanks for watching! :D",
-    "lastUpdate": "Last update: 04-2026"
+    "thanks": "Thanks for visiting!",
+    "lastUpdate": "Last update: 09/2026"
   },
   "NotFound": {
     "title": "Page not found",

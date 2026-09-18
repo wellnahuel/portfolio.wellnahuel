@@ -33,68 +33,83 @@ type ProjectSeed = Omit<Project, "number">;
 
 const projectSeeds: ProjectSeed[] = [
   {
-    id: "foodsterr",
-    visible: false,
+    id: "entienda-y-aprenda",
     title: {
-      en: "Food App - Foodsterr",
-      es: "App de Recetas - Foodsterr",
-      it: "App di Ricette - Foodsterr",
+      en: "Entienda y Aprenda",
+      es: "Entienda y Aprenda",
+      it: "Entienda y Aprenda",
     },
     tagline: {
-      en: "Single Page Application",
-      es: "Single Page Application",
-      it: "Single Page Application",
+      en: "Tutoring marketplace connecting students with private tutors",
+      es: "Marketplace de clases particulares que conecta estudiantes con tutores",
+      it: "Marketplace di lezioni private che collega studenti con tutor",
     },
     description: [
       {
-        en: "Design and development of a recipe App with searches by name and ID, filtering, ordering and creation of new recipes.",
-        es: "Diseño y desarrollo de una app de recetas con búsquedas por nombre e ID, filtrado, ordenamiento y creación de nuevas recetas.",
-        it: "Progettazione e sviluppo di un'app di ricette con ricerca per nome e ID, filtri, ordinamento e creazione di nuove ricette.",
+        en: "Full-stack SaaS platform that connects students with private tutors: tutor search by subject and university, pricing with group discounts and packs, class booking with a visual schedule picker and slot holds, real-time chat, and complete dashboards for both tutors and students.",
+        es: "Plataforma SaaS full-stack que conecta estudiantes con tutores particulares: búsqueda de tutores por materia y universidad, precios con descuentos por grupo y packs, reserva de clases con selector visual de horarios y bloqueo de slots, chat en tiempo real y dashboards completos para tutores y estudiantes.",
+        it: "Piattaforma SaaS full-stack che collega studenti con tutor privati: ricerca tutor per materia e università, prezzi con sconti di gruppo e pacchetti, prenotazione di lezioni con selettore visivo di orari e blocco degli slot, chat in tempo reale e dashboard complete sia per tutor che per studenti.",
       },
       {
-        en: "Developed with React, Redux and pure CSS on the frontend; Node.js with Express, PostgreSQL and Sequelize on the backend.",
-        es: "Desarrollada con React, Redux y CSS puro en el frontend; Node.js con Express, PostgreSQL y Sequelize en el backend.",
-        it: "Sviluppata con React, Redux e CSS puro nel frontend; Node.js con Express, PostgreSQL e Sequelize nel backend.",
+        en: "Built with Next.js 16, React 19 and TypeScript on the frontend, and a REST API in Python with Flask, SQLAlchemy, PostgreSQL and Redis on the backend. Deployed with Docker in production.",
+        es: "Desarrollado con Next.js 16, React 19 y TypeScript en el frontend, y una API REST en Python con Flask, SQLAlchemy, PostgreSQL y Redis en el backend. Desplegado con Docker en producción.",
+        it: "Sviluppato con Next.js 16, React 19 e TypeScript nel frontend, e un'API REST in Python con Flask, SQLAlchemy, PostgreSQL e Redis nel backend. Distribuito con Docker in produzione.",
       },
     ],
-    techStack: [
-      "javascript",
-      "react",
-      "redux",
-      "postgresql",
-      "express",
-      "sequelize",
-      "css3",
-      "postman",
-    ],
+    techStack: ["nextjs", "typescript", "react", "python", "flask", "postgresql", "redis", "docker"],
     images: {
-      banner: "/assets/images/foodsterr-banner-color.png",
+      banner: "/assets/images/eya-06.png",
       screenshots: [
-        {
-          src: "/assets/images/foodsterr-foto1.png",
-          caption: { en: "Home", es: "Inicio", it: "Home" },
-        },
-        {
-          src: "/assets/images/foodsterr-foto2-1.png",
-          caption: { en: "Recipe details", es: "Detalle de receta", it: "Dettaglio ricetta" },
-        },
-        {
-          src: "/assets/images/foodsterr-foto3.png",
-          caption: { en: "Create recipe", es: "Crear receta", it: "Crea ricetta" },
-        },
+        { src: "/assets/images/eya-01.png", caption: { en: "Slot picker to view the tutor's availability", es: "Slot picker para ver la disponibilidad del profesor", it: "Selettore di slot per vedere la disponibilità del tutor" } },
+        { src: "/assets/images/eya-02.png", caption: { en: "Tutor profile", es: "Perfil del profesor", it: "Profilo del tutor" } },
+        { src: "/assets/images/eya-03.png", caption: { en: "Private chat section between tutors and students", es: "Sección de chats privados entre profesores y alumnos", it: "Sezione di chat private tra tutor e studenti" } },
+        { src: "/assets/images/eya-04.png", caption: { en: "Dashboard for managing the tutor's payments, subjects taught and availability", es: "Dashboard para la gestión de los pagos del profesor, las materias que dicta y la disponibilidad", it: "Dashboard per la gestione dei pagamenti del tutor, delle materie insegnate e della disponibilità" } },
+        { src: "/assets/images/eya-05.png", caption: { en: "Tutor search section", es: "Sección de búsqueda de profesores", it: "Sezione di ricerca dei tutor" } },
       ],
     },
     links: [
+      { label: { en: "Website", es: "Sitio web", it: "Sito web" }, href: "https://entiendayaprenda.com/" },
+      { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/Entienda-y-Aprenda" },
+    ],
+    year: 2026,
+  },
+  {
+    id: "torino-city-intelligence",
+    title: {
+      en: "Torino City Intelligence",
+      es: "Torino City Intelligence",
+      it: "Torino City Intelligence",
+    },
+    tagline: {
+      en: "Interactive map of Turin to decide where to open a café",
+      es: "Mapa interactivo de Turín para decidir dónde abrir un café",
+      it: "Mappa interattiva di Torino per decidere dove aprire un caffè",
+    },
+    description: [
       {
-        label: { en: "Deploy", es: "Deploy", it: "Deploy" },
-        href: "https://foodsterr.netlify.app/",
+        en: "Interactive map of Turin that scores the city's 94 statistical zones from 0 to 100 on the best place to open a café, with an explainable breakdown per variable.",
+        es: "Mapa interactivo de Turín que puntúa las 94 zonas estadísticas de la ciudad de 0 a 100 sobre el mejor lugar para abrir un café, con un desglose explicable por variable.",
+        it: "Mappa interattiva di Torino che assegna un punteggio da 0 a 100 alle 94 zone statistiche della città sul miglior posto per aprire un caffè, con una ripartizione spiegabile per variabile.",
       },
       {
-        label: { en: "Repository", es: "Repositorio", it: "Repository" },
-        href: "https://github.com/wellnahuel/PI.Food.PT07",
+        en: "Six toggleable POI layers (cafés, restaurants, transit, schools, services and green areas) over a choropleth basemap, with a fully static export and zero API keys.",
+        es: "Seis capas de POI activables (cafés, restaurantes, transporte, escuelas, servicios y áreas verdes) sobre un mapa coroplético, con export estático y cero API keys.",
+        it: "Sei layer di POI attivabili (caffè, ristoranti, trasporti, scuole, servizi e aree verdi) su una mappa coropletica, con export statico e zero API key.",
       },
     ],
-    year: 2022,
+    techStack: ["nextjs", "typescript", "react", "tailwind", "maplibre", "heroui"],
+    images: {
+      banner: "/assets/images/torino-03.png",
+      screenshots: [
+        { src: "/assets/images/torino-01.png", caption: { en: "Interactive map view", es: "Vista del mapa interactivo", it: "Vista della mappa interattiva" } },
+        { src: "/assets/images/torino-02.png", caption: { en: "Interactive map view", es: "Vista del mapa interactivo", it: "Vista della mappa interattiva" } },
+      ],
+    },
+    links: [
+      { label: { en: "Deploy", es: "Deploy", it: "Deploy" }, href: "https://torino-city-intelligence.vercel.app/" },
+      { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/wellnahuel/torino-city-intelligence" },
+    ],
+    year: 2026,
   },
   {
     id: "athenas-club",
@@ -172,83 +187,68 @@ const projectSeeds: ProjectSeed[] = [
     year: 2022,
   },
   {
-    id: "torino-city-intelligence",
+    id: "foodsterr",
+    visible: false,
     title: {
-      en: "Torino City Intelligence",
-      es: "Torino City Intelligence",
-      it: "Torino City Intelligence",
+      en: "Food App - Foodsterr",
+      es: "App de Recetas - Foodsterr",
+      it: "App di Ricette - Foodsterr",
     },
     tagline: {
-      en: "Interactive map of Turin to decide where to open a café",
-      es: "Mapa interactivo de Turín para decidir dónde abrir un café",
-      it: "Mappa interattiva di Torino per decidere dove aprire un caffè",
+      en: "Single Page Application",
+      es: "Single Page Application",
+      it: "Single Page Application",
     },
     description: [
       {
-        en: "Interactive map of Turin that scores the city's 94 statistical zones from 0 to 100 on the best place to open a café, with an explainable breakdown per variable.",
-        es: "Mapa interactivo de Turín que puntúa las 94 zonas estadísticas de la ciudad de 0 a 100 sobre el mejor lugar para abrir un café, con un desglose explicable por variable.",
-        it: "Mappa interattiva di Torino che assegna un punteggio da 0 a 100 alle 94 zone statistiche della città sul miglior posto per aprire un caffè, con una ripartizione spiegabile per variabile.",
+        en: "Design and development of a recipe App with searches by name and ID, filtering, ordering and creation of new recipes.",
+        es: "Diseño y desarrollo de una app de recetas con búsquedas por nombre e ID, filtrado, ordenamiento y creación de nuevas recetas.",
+        it: "Progettazione e sviluppo di un'app di ricette con ricerca per nome e ID, filtri, ordinamento e creazione di nuove ricette.",
       },
       {
-        en: "Six toggleable POI layers (cafés, restaurants, transit, schools, services and green areas) over a choropleth basemap, with a fully static export and zero API keys.",
-        es: "Seis capas de POI activables (cafés, restaurantes, transporte, escuelas, servicios y áreas verdes) sobre un mapa coroplético, con export estático y cero API keys.",
-        it: "Sei layer di POI attivabili (caffè, ristoranti, trasporti, scuole, servizi e aree verdi) su una mappa coropletica, con export statico e zero API key.",
+        en: "Developed with React, Redux and pure CSS on the frontend; Node.js with Express, PostgreSQL and Sequelize on the backend.",
+        es: "Desarrollada con React, Redux y CSS puro en el frontend; Node.js con Express, PostgreSQL y Sequelize en el backend.",
+        it: "Sviluppata con React, Redux e CSS puro nel frontend; Node.js con Express, PostgreSQL e Sequelize nel backend.",
       },
     ],
-    techStack: ["nextjs", "typescript", "react", "tailwind", "maplibre", "heroui"],
+    techStack: [
+      "javascript",
+      "react",
+      "redux",
+      "postgresql",
+      "express",
+      "sequelize",
+      "css3",
+      "postman",
+    ],
     images: {
-      banner: "/assets/images/torino-03.png",
+      banner: "/assets/images/foodsterr-banner-color.png",
       screenshots: [
-        { src: "/assets/images/torino-01.png", caption: { en: "Interactive map view", es: "Vista del mapa interactivo", it: "Vista della mappa interattiva" } },
-        { src: "/assets/images/torino-02.png", caption: { en: "Interactive map view", es: "Vista del mapa interactivo", it: "Vista della mappa interattiva" } },
+        {
+          src: "/assets/images/foodsterr-foto1.png",
+          caption: { en: "Home", es: "Inicio", it: "Home" },
+        },
+        {
+          src: "/assets/images/foodsterr-foto2-1.png",
+          caption: { en: "Recipe details", es: "Detalle de receta", it: "Dettaglio ricetta" },
+        },
+        {
+          src: "/assets/images/foodsterr-foto3.png",
+          caption: { en: "Create recipe", es: "Crear receta", it: "Crea ricetta" },
+        },
       ],
     },
     links: [
-      { label: { en: "Deploy", es: "Deploy", it: "Deploy" }, href: "https://torino-city-intelligence.vercel.app/" },
-      { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/wellnahuel/torino-city-intelligence" },
-    ],
-    year: 2026,
-  },
-  {
-    id: "entienda-y-aprenda",
-    title: {
-      en: "Entienda y Aprenda",
-      es: "Entienda y Aprenda",
-      it: "Entienda y Aprenda",
-    },
-    tagline: {
-      en: "Tutoring marketplace connecting students with private tutors",
-      es: "Marketplace de clases particulares que conecta estudiantes con tutores",
-      it: "Marketplace di lezioni private che collega studenti con tutor",
-    },
-    description: [
       {
-        en: "Full-stack SaaS platform that connects students with private tutors: tutor search by subject and university, pricing with group discounts and packs, class booking with a visual schedule picker and slot holds, real-time chat, and complete dashboards for both tutors and students.",
-        es: "Plataforma SaaS full-stack que conecta estudiantes con tutores particulares: búsqueda de tutores por materia y universidad, precios con descuentos por grupo y packs, reserva de clases con selector visual de horarios y bloqueo de slots, chat en tiempo real y dashboards completos para tutores y estudiantes.",
-        it: "Piattaforma SaaS full-stack che collega studenti con tutor privati: ricerca tutor per materia e università, prezzi con sconti di gruppo e pacchetti, prenotazione di lezioni con selettore visivo di orari e blocco degli slot, chat in tempo reale e dashboard complete sia per tutor che per studenti.",
+        label: { en: "Deploy", es: "Deploy", it: "Deploy" },
+        href: "https://foodsterr.netlify.app/",
       },
       {
-        en: "Built with Next.js 16, React 19 and TypeScript on the frontend, and a REST API in Python with Flask, SQLAlchemy, PostgreSQL and Redis on the backend. Deployed with Docker in production.",
-        es: "Desarrollado con Next.js 16, React 19 y TypeScript en el frontend, y una API REST en Python con Flask, SQLAlchemy, PostgreSQL y Redis en el backend. Desplegado con Docker en producción.",
-        it: "Sviluppato con Next.js 16, React 19 e TypeScript nel frontend, e un'API REST in Python con Flask, SQLAlchemy, PostgreSQL e Redis nel backend. Distribuito con Docker in produzione.",
+        label: { en: "Repository", es: "Repositorio", it: "Repository" },
+        href: "https://github.com/wellnahuel/PI.Food.PT07",
       },
     ],
-    techStack: ["nextjs", "typescript", "react", "python", "flask", "postgresql", "redis", "docker"],
-    images: {
-      banner: "/assets/images/eya-06.png",
-      screenshots: [
-        { src: "/assets/images/eya-01.png", caption: { en: "Slot picker to view the tutor's availability", es: "Slot picker para ver la disponibilidad del profesor", it: "Selettore di slot per vedere la disponibilità del tutor" } },
-        { src: "/assets/images/eya-02.png", caption: { en: "Tutor profile", es: "Perfil del profesor", it: "Profilo del tutor" } },
-        { src: "/assets/images/eya-03.png", caption: { en: "Private chat section between tutors and students", es: "Sección de chats privados entre profesores y alumnos", it: "Sezione di chat private tra tutor e studenti" } },
-        { src: "/assets/images/eya-04.png", caption: { en: "Dashboard for managing the tutor's payments, subjects taught and availability", es: "Dashboard para la gestión de los pagos del profesor, las materias que dicta y la disponibilidad", it: "Dashboard per la gestione dei pagamenti del tutor, delle materie insegnate e della disponibilità" } },
-        { src: "/assets/images/eya-05.png", caption: { en: "Tutor search section", es: "Sección de búsqueda de profesores", it: "Sezione di ricerca dei tutor" } },
-      ],
-    },
-    links: [
-      { label: { en: "Website", es: "Sitio web", it: "Sito web" }, href: "https://entiendayaprenda.com/" },
-      { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/Entienda-y-Aprenda" },
-    ],
-    year: 2026,
+    year: 2022,
   },
 ];
 
