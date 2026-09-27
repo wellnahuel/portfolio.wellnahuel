@@ -12,16 +12,23 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-const STACK = [
-  "javascript",
-  "react",
-  "redux",
-  "css3",
-  "bootstrap",
-  "tailwind",
-  "chakra",
-  "sass",
-  "git",
+const STACK_GROUPS = [
+  {
+    titleKey: "stackFrontend",
+    skills: ["javascript", "typescript", "react", "nextjs", "vite", "redux", "zustand", "css3", "tailwind", "sass", "heroui", "maplibre", "mercadopago"],
+  },
+  {
+    titleKey: "stackBackend",
+    skills: ["python", "flask", "express", "postgresql", "sequelize", "redis"],
+  },
+  {
+    titleKey: "stackAI",
+    skills: ["opencode", "deepseek"],
+  },
+  {
+    titleKey: "stackDevops",
+    skills: ["docker", "vercel", "postman", "git"],
+  },
 ];
 
 export default async function AboutPage({
@@ -61,9 +68,16 @@ export default async function AboutPage({
             <h2 className="text-xl font-bold tracking-tight">
               {t("stackTitle")}
             </h2>
-            <div className="flex flex-wrap gap-3">
-              {STACK.map((skill) => (
-                <SkillBadge key={skill} skill={skill} />
+            <div className="space-y-6">
+              {STACK_GROUPS.map((group) => (
+                <div key={group.titleKey} className="space-y-2">
+                  <h3 className="font-mono text-sm text-muted-foreground">{t(group.titleKey)}</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {group.skills.map((skill) => (
+                      <SkillBadge key={skill} skill={skill} />
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </section>
@@ -117,7 +131,7 @@ export default async function AboutPage({
           </section>
         </div>
 
-        <div className="relative aspect-square overflow-hidden rounded-lg border border-border lg:aspect-auto">
+        <div className="relative aspect-[3/4] overflow-hidden rounded-lg border border-border">
           <Image
             src="/assets/images/profile-portfolio.jpg"
             alt={t("profileAlt")}

@@ -26,10 +26,14 @@
   "About": {
     "title": "Su di me",
     "name": "Sono Nahuel",
-    "intro": "Sto cercando nuove sfide ed esperienze per continuare ad apprendere e migliorare.",
+    "intro": "Sono Nahuel, sviluppatore full-stack che costruisce prodotti reali end-to-end — dalle interfacce che gli utenti toccano ai database che li sostengono. Ho in produzione una piattaforma di tutoraggio (Entienda y Aprenda) e strumenti basati sui dati come Torino City Intelligence, e sono sempre alla ricerca di come l'IA rende lo sviluppo più veloce e i prodotti più intelligenti.",
     "goalsTitle": "I miei obiettivi",
-    "goalsText": "Mi interessa lavorare e apprendere nella tecnologia per collaborare a progetti che lascino un'impronta sociale, dove possa davvero risolvere i bisogni delle persone, apportando tutto ciò che ho imparato nella mia vita nel codice e nello sviluppo, e realizzando il mio sogno di ideare e creare prodotti digitali nel mondo reale per persone reali.",
+    "goalsText": "Continuare a costruire prodotti che risolvono problemi reali per persone reali — e continuare a imparare come l'IA permette a un piccolo team di realizzare ciò che prima richiedeva uno grande.",
     "stackTitle": "Questo è il mio stack tecnologico",
+    "stackFrontend": "Frontend",
+    "stackBackend": "Backend",
+    "stackAI": "IA e Strumenti",
+    "stackDevops": "DevOps",
     "resumeTitle": "Vedi la mia esperienza e formazione in dettaglio",
     "resume": "Curriculum",
     "profileAlt": "Foto profilo"

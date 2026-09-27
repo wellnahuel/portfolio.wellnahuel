@@ -26,10 +26,14 @@
   "About": {
     "title": "About me",
     "name": "I'm Nahuel",
-    "intro": "I'm searching for new challenges & experiences to keep learning and improving.",
+    "intro": "I'm Nahuel, a full-stack developer who builds real products end-to-end — from the interfaces users touch to the databases behind them. I've shipped a production tutoring platform (Entienda y Aprenda) and data-driven tools like Torino City Intelligence, and I'm always exploring how AI can make development faster and products smarter.",
     "goalsTitle": "My goals",
-    "goalsText": "I am interested in working and learning in technology to collaborate in projects that leave a social footprint where I can really solve the needs of people, contributing everything I have learned throughout my life in code and tech development, and fulfilling my dream of devising and creating digital products in the real world for real people.",
+    "goalsText": "Keep building products that solve real problems for real people — and keep learning how AI lets a small team ship what used to take a big one.",
     "stackTitle": "This is my tech stack",
+    "stackFrontend": "Frontend",
+    "stackBackend": "Backend",
+    "stackAI": "AI & Tools",
+    "stackDevops": "DevOps",
     "resumeTitle": "See my experience and formation in detail",
     "resume": "Resume",
     "profileAlt": "Profile photo"

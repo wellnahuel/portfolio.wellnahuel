@@ -14,6 +14,8 @@ const SKILL_ICONS: Record<string, string> = {
   chakra: "/assets/icons/chakraui-svgrepo-com.svg",
   sass: "/assets/icons/sass-svgrepo-com.svg",
   git: "/assets/icons/icons8-git.svg",
+  opencode: "/assets/icons/opencode.svg",
+  deepseek: "/assets/icons/deepseek.svg",
   typescript: "/assets/icons/icons8-typescript.svg",
   mui: "/assets/icons/icons8-material-ui.svg",
   postman: "/assets/icons/postman-svgrepo-com.svg",

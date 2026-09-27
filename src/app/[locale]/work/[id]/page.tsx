@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { projects, getProjectById, type Locale } from "@/data/projects";
 import { ProjectDetail } from "@/components/project-detail";
@@ -33,6 +33,7 @@ export default async function WorkDetailPage({
 }) {
   const { locale, id } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("Nav");
 
   const project = getProjectById(id);
   if (!project) {
@@ -45,7 +46,7 @@ export default async function WorkDetailPage({
         href="/works"
         className="mb-10 inline-flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-accent"
       >
-        ← Works
+        ← {t("works")}
       </Link>
 
       <ProjectDetail project={project} />
