@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { SectionTitle } from "@/components/section-title";
 import { SkillBadge } from "@/components/skill-badge";
+import { AuroraBackground } from "@/components/aurora-background";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("About");
@@ -42,6 +43,7 @@ export default async function AboutPage({
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
+      <AuroraBackground />
       <div className="mb-14">
         <SectionTitle number="03" title={t("title")} />
       </div>

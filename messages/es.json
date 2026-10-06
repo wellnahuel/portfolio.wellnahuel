@@ -26,7 +26,7 @@
   "About": {
     "title": "Sobre mí",
     "name": "Soy Nahuel",
-    "intro": "Soy Nahuel, desarrollador full-stack que construye productos reales de punta a punta — desde las interfaces que tocan los usuarios hasta las bases de datos que los sostienen. En producción tengo una plataforma de tutorías (Entienda y Aprenda) y herramientas de datos como Torino City Intelligence, y siempre estoy explorando cómo la IA hace el desarrollo más rápido y los productos más inteligentes.",
+    "intro": "Soy Nahuel, desarrollador full-stack que empezó como profesor de física y estudiante de ingeniería electrónica. Por eso construyo productos que conectan a las personas con el conocimiento — como la plataforma de tutorías Entienda y Aprenda — además de herramientas de datos como Torino City Intelligence, siempre explorando cómo la IA hace el desarrollo más rápido y los productos más inteligentes.",
     "goalsTitle": "Mis objetivos",
     "goalsText": "Seguir construyendo productos que resuelven problemas reales para personas reales — y seguir aprendiendo cómo la IA permite que un equipo chico haga lo que antes requería uno grande.",
     "stackTitle": "Este es mi stack tecnológico",
@@ -46,7 +46,7 @@
     "message": "Escribí tu mensaje",
     "send": "Enviar",
     "emailLabel": "Email",
-    "location": "Mar del Plata, Buenos Aires, Argentina",
+    "location": "Turín, Piamonte, Italia",
     "socialTitle": "Seguime en las redes",
     "resume": "Currículum"
   },

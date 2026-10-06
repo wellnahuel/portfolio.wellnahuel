@@ -26,7 +26,7 @@
   "About": {
     "title": "About me",
     "name": "I'm Nahuel",
-    "intro": "I'm Nahuel, a full-stack developer who builds real products end-to-end — from the interfaces users touch to the databases behind them. I've shipped a production tutoring platform (Entienda y Aprenda) and data-driven tools like Torino City Intelligence, and I'm always exploring how AI can make development faster and products smarter.",
+    "intro": "I'm Nahuel, a full-stack developer who started out as a physics teacher and electronics engineering student. That's why I build products that connect people with knowledge — like the tutoring platform Entienda y Aprenda — alongside data-driven tools such as Torino City Intelligence, always exploring how AI makes development faster and products smarter.",
     "goalsTitle": "My goals",
     "goalsText": "Keep building products that solve real problems for real people — and keep learning how AI lets a small team ship what used to take a big one.",
     "stackTitle": "This is my tech stack",
@@ -46,7 +46,7 @@
     "message": "Enter your message",
     "send": "Send",
     "emailLabel": "Email",
-    "location": "Mar del Plata, Buenos Aires, Argentina",
+    "location": "Turin, Piedmont, Italy",
     "socialTitle": "Follow me on social networks",
     "resume": "Resume"
   },

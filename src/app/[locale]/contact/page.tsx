@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { SectionTitle } from "@/components/section-title";
 import { ContactForm } from "@/components/contact-form";
+import { AuroraBackground } from "@/components/aurora-background";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Contact");
@@ -22,6 +23,7 @@ export default async function ContactPage({
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-20">
+      <AuroraBackground />
       <div className="mb-14">
         <SectionTitle number="04" title={t("title")} />
       </div>
