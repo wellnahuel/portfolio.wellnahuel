@@ -101,80 +101,48 @@ body {
   border-radius: 9999px;
   filter: blur(120px);
   opacity: 0.5;
-  will-change: transform;
 }
 
 .aurora-blob-1 {
   width: 60vw;
   height: 60vw;
-  left: calc(10% + var(--aurora-x) * 12px);
-  top: calc(5% + var(--aurora-y) * 12px);
+  left: 10%;
+  top: 5%;
+  translate: calc(var(--aurora-x) * 12px) calc(var(--aurora-y) * 12px);
   background: radial-gradient(
     circle,
     color-mix(in srgb, var(--accent) 18%, transparent) 0%,
     transparent 70%
   );
-  animation: aurora-drift-1 24s ease-in-out infinite alternate;
 }
 
 .aurora-blob-2 {
   width: 50vw;
   height: 50vw;
-  right: calc(5% - var(--aurora-x) * 16px);
-  top: calc(30% - var(--aurora-y) * 16px);
+  right: 5%;
+  top: 30%;
+  translate: calc(var(--aurora-x) * 16px) calc(var(--aurora-y) * -16px);
   background: radial-gradient(
     circle,
     color-mix(in srgb, #38bdf8 14%, transparent) 0%,
     transparent 70%
   );
-  animation: aurora-drift-2 30s ease-in-out infinite alternate;
 }
 
 .aurora-blob-3 {
   width: 45vw;
   height: 45vw;
-  left: calc(40% + var(--aurora-x) * 10px);
-  bottom: calc(-10% + var(--aurora-y) * 14px);
+  left: 40%;
+  bottom: -10%;
+  translate: calc(var(--aurora-x) * 10px) calc(var(--aurora-y) * -14px);
   background: radial-gradient(
     circle,
     color-mix(in srgb, #34d399 12%, transparent) 0%,
     transparent 70%
   );
-  animation: aurora-drift-3 28s ease-in-out infinite alternate;
 }
 
-@keyframes aurora-drift-1 {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(3%, 4%) scale(1.08); }
-}
-
-@keyframes aurora-drift-2 {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(-4%, 3%) scale(1.05); }
-}
-
-@keyframes aurora-drift-3 {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(2%, -3%) scale(1.1); }
-}
-
-/* Mobile / touch: fixed 120px blur dilutes the smaller vw blobs and the 40s
-   drift was imperceptible. Boost intensity, tighten blur, speed up motion. */
-@keyframes aurora-drift-1-mobile {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(6%, 8%) scale(1.15); }
-}
-
-@keyframes aurora-drift-2-mobile {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(-8%, 5%) scale(1.12); }
-}
-
-@keyframes aurora-drift-3-mobile {
-  from { transform: translate(0, 0) scale(1); }
-  to { transform: translate(5%, -7%) scale(1.18); }
-}
-
+/* Mobile / touch: fixed 120px blur dilutes the smaller vw blobs. */
 @media (max-width: 767px), (pointer: coarse) {
   .aurora-blob {
     filter: blur(60px);
@@ -187,7 +155,6 @@ body {
       color-mix(in srgb, var(--accent) 25%, transparent) 0%,
       transparent 70%
     );
-    animation: aurora-drift-1-mobile 16s ease-in-out infinite alternate;
   }
 
   .aurora-blob-2 {
@@ -196,7 +163,6 @@ body {
       color-mix(in srgb, #38bdf8 22%, transparent) 0%,
       transparent 70%
     );
-    animation: aurora-drift-2-mobile 18s ease-in-out infinite alternate;
   }
 
   .aurora-blob-3 {
@@ -205,13 +171,6 @@ body {
       color-mix(in srgb, #34d399 20%, transparent) 0%,
       transparent 70%
     );
-    animation: aurora-drift-3-mobile 17s ease-in-out infinite alternate;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .aurora-blob {
-    animation: none;
   }
 }
 

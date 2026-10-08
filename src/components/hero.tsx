@@ -23,32 +23,65 @@ export function Hero() {
     const bg = bgRef.current;
     if (!section || !bg) return;
 
+    const EPSILON = 0.0005;
     let currentX = 0;
     let currentY = 0;
     let rafId = 0;
-
-    const onMouseMove = (event: MouseEvent) => {
-      // Normalized position in [-1, 1]: 0 at viewport center, ±1 at edges
-      targetX.current = (event.clientX / window.innerWidth - 0.5) * 2;
-      targetY.current = (event.clientY / window.innerHeight - 0.5) * 2;
-    };
 
     const animate = () => {
       // Smoothly interpolate towards the target for a fluid feel
       currentX += (targetX.current - currentX) * 0.08;
       currentY += (targetY.current - currentY) * 0.08;
       bg.style.transform = `translate3d(${-20 * currentX}px, ${-20 * currentY}px, 0)`;
+
+      const settled =
+        Math.abs(targetX.current - currentX) <= EPSILON &&
+        Math.abs(targetY.current - currentY) <= EPSILON;
+
+      if (settled || document.hidden) {
+        rafId = 0; // Let the loop die until the next input
+        return;
+      }
+
       rafId = requestAnimationFrame(animate);
+    };
+
+    const ensureAnimating = () => {
+      if (rafId === 0 && !document.hidden) {
+        rafId = requestAnimationFrame(animate);
+      }
+    };
+
+    const onMouseMove = (event: MouseEvent) => {
+      // Normalized position in [-1, 1]: 0 at viewport center, ±1 at edges
+      targetX.current = (event.clientX / window.innerWidth - 0.5) * 2;
+      targetY.current = (event.clientY / window.innerHeight - 0.5) * 2;
+      ensureAnimating();
+    };
+
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        cancelAnimationFrame(rafId);
+        rafId = 0;
+      } else if (
+        Math.abs(targetX.current - currentX) > EPSILON ||
+        Math.abs(targetY.current - currentY) > EPSILON
+      ) {
+        ensureAnimating();
+      }
     };
 
     // Listen on the SECTION so any mousemove over the hero is captured,
     // then translate the background layer.
     section.addEventListener("mousemove", onMouseMove);
-    rafId = requestAnimationFrame(animate);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    ensureAnimating();
 
     return () => {
       section.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
       cancelAnimationFrame(rafId);
+      rafId = 0;
       bg.style.transform = "";
     };
   }, []);
