@@ -29,6 +29,10 @@ const SKILL_ICONS: Record<string, string> = {
   flask: "/assets/icons/flask.svg",
   redis: "/assets/icons/redis.svg",
   docker: "/assets/icons/docker.svg",
+  nodejs: "/assets/icons/nodejs.svg",
+  pnpm: "/assets/icons/pnpm.svg",
+  eslint: "/assets/icons/eslint.svg",
+  spotify: "/assets/icons/spotify.svg",
 };
 
 // PNG icons already carry their brand colors; SVG icons are monochrome

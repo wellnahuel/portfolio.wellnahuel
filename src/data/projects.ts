@@ -250,6 +250,45 @@ const projectSeeds: ProjectSeed[] = [
     ],
     year: 2022,
   },
+  {
+    id: "taste-in-moods",
+    title: {
+      en: "Taste in Moods",
+      es: "Taste in Moods",
+      it: "Taste in Moods",
+    },
+    tagline: {
+      en: "Find the Placebo song that understands how you feel",
+      es: "Encontrá la canción de Placebo que entiende cómo te sentís",
+      it: "Trova la canzone dei Placebo che capisce come ti senti",
+    },
+    description: [
+      {
+        en: "A mood-based music discovery app that recommends songs from Placebo's catalog based on how you feel. Choose one or more emotions with an intensity level and decide whether the song should match your mood, lift you up or lean into it.",
+        es: "Aplicación de descubrimiento musical basada en el estado de ánimo que recomienda canciones del catálogo de Placebo según cómo te sentís. Elegí una o más emociones con un nivel de intensidad y decidí si la canción debe acompañar tu ánimo, levantarte o profundizarlo.",
+        it: "App di scoperta musicale basata sull'umore che consiglia brani dal catalogo dei Placebo in base a come ti senti. Scegli una o più emozioni con un livello di intensità e decidi se la canzone deve accompagnare il tuo umore, sollevarti o approfondirlo.",
+      },
+      {
+        en: "Built with Next.js, React, TypeScript and Tailwind CSS, with a hand-written recommendation engine that combines weighted emotion vectors with objective audio features. Fully static, trilingual (English, Spanish and Italian) and designed around a dark, minimal aesthetic.",
+        es: "Desarrollada con Next.js, React, TypeScript y Tailwind CSS, con un motor de recomendación escrito a mano que combina vectores de emociones ponderados con características de audio objetivas. Totalmente estática, trilingüe (inglés, español e italiano) y diseñada con una estética oscura y minimalista.",
+        it: "Sviluppata con Next.js, React, TypeScript e Tailwind CSS, con un motore di raccomandazione scritto a mano che combina vettori di emozioni ponderati con caratteristiche audio oggettive. Completamente statica, trilingue (inglese, spagnolo e italiano) e progettata con un'estetica scura e minimale.",
+      },
+    ],
+    techStack: ["nextjs", "react", "typescript", "tailwind", "nodejs", "spotify", "vercel"],
+    images: {
+      banner: "/assets/images/taste-in-moods-01.png",
+      screenshots: [
+        { src: "/assets/images/taste-in-moods-01.png", caption: { en: "App interface", es: "Interfaz de la aplicación", it: "Interfaccia dell'app" } },
+        { src: "/assets/images/taste-in-moods-02.png", caption: { en: "App interface", es: "Interfaz de la aplicación", it: "Interfaccia dell'app" } },
+        { src: "/assets/images/taste-in-moods-03.png", caption: { en: "App interface", es: "Interfaz de la aplicación", it: "Interfaccia dell'app" } },
+      ],
+    },
+    links: [
+      { label: { en: "Website", es: "Sitio web", it: "Sito web" }, href: "https://taste-in-moods.vercel.app/" },
+      { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/wellnahuel/taste-in-moods" },
+    ],
+    year: 2026,
+  },
 ];
 
 export const projects: Project[] = projectSeeds
