@@ -122,7 +122,7 @@ export default async function AboutPage({
                 </svg>
               </a>
               <a
-                href="https://drive.google.com/file/d/1fonTp4G2YoAvhsuK_ozkfChflZ6MdRkN/view?usp=sharing"
+                href="/assets/files/cv-nahuel-cittadino.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full border border-border px-6 py-2 font-mono text-sm transition-colors hover:border-accent hover:text-accent"
