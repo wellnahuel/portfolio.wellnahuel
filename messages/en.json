@@ -52,7 +52,7 @@
   },
   "Footer": {
     "thanks": "Thanks for visiting!",
-    "lastUpdate": "Last update: 09/2026"
+    "lastUpdate": "Last updated: {date}"
   },
   "NotFound": {
     "title": "Page not found",

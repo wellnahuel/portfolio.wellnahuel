@@ -52,7 +52,7 @@
   },
   "Footer": {
     "thanks": "¡Gracias por la visita!",
-    "lastUpdate": "Última actualización: 09/2026"
+    "lastUpdate": "Última actualización: {date}"
   },
   "NotFound": {
     "title": "Página no encontrada",
