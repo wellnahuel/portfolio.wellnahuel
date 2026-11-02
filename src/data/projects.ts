@@ -284,7 +284,7 @@ const projectSeeds: ProjectSeed[] = [
       ],
     },
     links: [
-      { label: { en: "Website", es: "Sitio web", it: "Sito web" }, href: "https://taste-in-moods.vercel.app/" },
+      { label: { en: "Deploy", es: "Deploy", it: "Deploy" }, href: "https://taste-in-moods.vercel.app/" },
       { label: { en: "Repository", es: "Repositorio", it: "Repository" }, href: "https://github.com/wellnahuel/taste-in-moods" },
     ],
     year: 2026,
